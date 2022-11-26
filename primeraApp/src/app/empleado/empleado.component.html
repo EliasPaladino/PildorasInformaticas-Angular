@@ -1,1 +1,11 @@
 <h2>¡Soy un empleado!</h2>
+
+<p>Mi nombre es: {{nombre}}</p>
+<p>Mi apellido es: {{apellido}}</p>
+<p>Mi edad es: {{edad}}</p>
+<p>Mi empresa es: {{empresa.value}}</p>
+
+<input type="text" #empresa >
+<button (click)="setEmpresa(empresa.value)">Enviar</button>
+
+

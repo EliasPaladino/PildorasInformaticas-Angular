@@ -25,4 +25,11 @@ import { Component } from '@angular/core';
     `,
   ],*/
 })
-export class EmpleadoComponent {}
+export class EmpleadoComponent {
+  nombre = 'Elias';
+  apellido = 'Paladino';
+  edad = 23;
+  empresa = 'The Family Company';
+
+  setEmpresa(value: String) {}
+}
