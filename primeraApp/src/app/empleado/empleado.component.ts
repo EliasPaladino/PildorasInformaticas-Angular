@@ -31,5 +31,11 @@ export class EmpleadoComponent {
   edad = 23;
   empresa = 'The Family Company';
 
+  usuarioRegistrado = false;
+
+  getRegistrado() {
+    this.usuarioRegistrado = true;
+  }
+
   setEmpresa(value: String) {}
 }

@@ -5,7 +5,14 @@
 <p>Mi edad es: {{edad}}</p>
 <p>Mi empresa es: {{empresa.value}}</p>
 
-<input type="text" #empresa >
-<button (click)="setEmpresa(empresa.value)">Enviar</button>
+<input type="text" #empresa (keyup)="empresa.value" >
+<!--  <button (click)="setEmpresa(empresa.value)">Enviar</button> -->
 
+<!-- PROBANDO PROPERTY BINDING -->
+<br>
+<br>
 
+<span style="margin-right: 5px;">¿Registrado?</span>
+<input type="checkbox" [checked]="usuarioRegistrado">
+
+{{getRegistrado()}}
