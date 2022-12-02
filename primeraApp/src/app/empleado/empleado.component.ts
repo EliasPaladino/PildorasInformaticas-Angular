@@ -32,9 +32,18 @@ export class EmpleadoComponent {
   empresa = 'The Family Company';
 
   usuarioRegistrado = false;
+  textoRegistro = "No hay nadie registrado";
 
   getRegistrado() {
-    this.usuarioRegistrado = true;
+    this.usuarioRegistrado = false;
+  }
+
+  setUsuarioRegistrado(event: Event) {
+    if((<HTMLInputElement>event.target).value == "si") {
+      this.textoRegistro = "Usuario registrado correctamente"
+    } else {
+      this.textoRegistro = "No hay nadie registrado";
+    }
   }
 
   setEmpresa(value: String) {}

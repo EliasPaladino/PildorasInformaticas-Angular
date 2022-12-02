@@ -3,9 +3,9 @@
 <p>Mi nombre es: {{nombre}}</p>
 <p>Mi apellido es: {{apellido}}</p>
 <p>Mi edad es: {{edad}}</p>
-<p>Mi empresa es: {{empresa.value}}</p>
+<p>Mi empresa es: {{empresa}}</p>
 
-<input type="text" #empresa (keyup)="empresa.value" >
+<input type="text" [(ngModel)]="empresa" >
 <!--  <button (click)="setEmpresa(empresa.value)">Enviar</button> -->
 
 <!-- PROBANDO PROPERTY BINDING -->
@@ -13,6 +13,8 @@
 <br>
 
 <span style="margin-right: 5px;">¿Registrado?</span>
-<input type="checkbox" [checked]="usuarioRegistrado">
+<span style="margin-right: 5px;">{{textoRegistro}}</span><br>
+Si <input style="margin-top: 5px;" type="radio" value="si" name="registro" (click)="setUsuarioRegistrado($event)">
+No <input type="radio" value="no" name="registro" (click)="setUsuarioRegistrado($event)">
 
 {{getRegistrado()}}
