@@ -16,13 +16,14 @@ export class AppComponent {
     new Empleado("Juan", "Ramirez", "Administrativo", 3000),
   ];
 
+  crearEmpleado() {
+    let empleadoNuevo = new Empleado(this.inputNombre, this.inputApellido, this.inputPuesto, this.inputSueldo);
+    this.empleados = [...this.empleados, empleadoNuevo];
+  }
+
   inputNombre: string = "";
   inputApellido: string = "";
   inputPuesto: string = "";
   inputSueldo: number = 0;
 
-  crearEmpleado() {
-    let empleadoNuevo = new Empleado(this.inputNombre, this.inputApellido, this.inputPuesto, this.inputSueldo);
-    this.empleados.push(empleadoNuevo);
-  }
 }
